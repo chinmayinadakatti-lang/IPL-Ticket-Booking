@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IPL Ticket Booking 2026</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>IPL TICKETS</h1>
+        <p>Official IPL 2026 Ticket Booking Portal</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#teams">Matches</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#booking">Book Tickets</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <h1>Welcome to IPL Ticket Booking 2026</h1>
+
+        <p>
+            Experience the excitement of cricket live in the stadium!
+        </p>
+
+        <p>
+            Book your IPL tickets today and support your favourite team.
+        </p>
+
+        <a href="#booking" class="hero-button">
+            Book Your Tickets
+        </a>
+    </section>
+
+    <!-- Popular IPL Teams -->
+    <section id="teams">
+
+        <h2>Popular IPL Teams</h2>
+
+        <p>
+            Choose your favourite team and enjoy the cricket action.
+        </p>
+
+        <div class="team-container">
+
+            <div class="team-card">
+                <div class="team-icon">🦁</div>
+
+                <h3>Chennai Super Kings</h3>
+
+                <p>
+                    <strong>Home Ground:</strong>
+                    M. A. Chidambaram Stadium
+                </p>
+
+                <p>
+                    <strong>Captain:</strong>
+                    Ruturaj Gaikwad
+                </p>
+            </div>
+
+            <div class="team-card">
+                <div class="team-icon">🏏</div>
+
+                <h3>Royal Challengers Bengaluru</h3>
+
+                <p>
+                    <strong>Home Ground:</strong>
+                    M. Chinnaswamy Stadium
+                </p>
+
+                <p>
+                    <strong>Team:</strong> RCB
+                </p>
+            </div>
+
+            <div class="team-card">
+                <div class="team-icon">💙</div>
+
+                <h3>Mumbai Indians</h3>
+
+                <p>
+                    <strong>Home Ground:</strong>
+                    Wankhede Stadium
+                </p>
+
+                <p>
+                    <strong>Team:</strong> MI
+                </p>
+            </div>
+
+            <div class="team-card">
+                <div class="team-icon">💜</div>
+
+                <h3>Kolkata Knight Riders</h3>
+
+                <p>
+                    <strong>Home Ground:</strong>
+                    Eden Gardens
+                </p>
+
+                <p>
+                    <strong>Team:</strong> KKR
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Match Schedule -->
+    <section id="schedule">
+
+        <h2>Upcoming Match Schedule</h2>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Match</th>
+                        <th>Teams</th>
+                        <th>Venue</th>
+                        <th>Date</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>RCB vs CSK</td>
+                        <td>Bengaluru</td>
+                        <td>10 April 2026</td>
+                        <td>General</td>
+                        <td>₹800</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>MI vs KKR</td>
+                        <td>Mumbai</td>
+                        <td>12 April 2026</td>
+                        <td>Premium</td>
+                        <td>₹1500</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>CSK vs MI</td>
+                        <td>Chennai</td>
+                        <td>15 April 2026</td>
+                        <td>VIP</td>
+                        <td>₹3000</td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>RCB vs KKR</td>
+                        <td>Bengaluru</td>
+                        <td>18 April 2026</td>
+                        <td>General</td>
+                        <td>₹800</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+    <!-- Ticket Booking Form -->
+    <section id="booking">
+
+        <h2>Book Your IPL Tickets</h2>
+
+        <p>
+            Fill in the details below to book your tickets.
+        </p>
+
+        <form id="bookingForm">
+
+            <label for="name">Full Name</label>
+
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your full name"
+                required
+            >
+
+            <label for="email">Email Address</label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email address"
+                required
+            >
+
+            <label for="match">Select Match</label>
+
+            <select id="match" name="match" required>
+                <option value="">-- Select Match --</option>
+                <option value="RCB vs CSK">RCB vs CSK</option>
+                <option value="MI vs KKR">MI vs KKR</option>
+                <option value="CSK vs MI">CSK vs MI</option>
+                <option value="RCB vs KKR">RCB vs KKR</option>
+            </select>
+
+            <label for="quantity">Number of Tickets</label>
+
+            <input
+                type="number"
+                id="quantity"
+                name="quantity"
+                min="1"
+                max="10"
+                value="1"
+                required
+            >
+
+            <label for="category">Ticket Category</label>
+
+            <select id="category" name="category" required>
+                <option value="">-- Select Category --</option>
+                <option value="General">General</option>
+                <option value="Premium">Premium</option>
+                <option value="VIP">VIP</option>
+            </select>
+
+            <button type="submit">
+                Book Now
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>
+            <strong>Email:</strong>
+            support@ipltickets.com
+        </p>
+
+        <p>
+            <strong>Phone:</strong>
+            +91 9876543210
+        </p>
+
+        <p>
+            For ticket booking assistance, contact our support team.
+        </p>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <h3>IPL TICKETS 2026</h3>
+
+        <p>
+            © 2026 IPL Ticket Booking. All Rights Reserved.
+        </p>
+
+        <p>
+            Designed for educational purposes.
+        </p>
+
+    </footer>
+
+</body>
+</html>
