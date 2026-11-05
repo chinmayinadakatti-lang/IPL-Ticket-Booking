@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Ticket Booking</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #071952, #088395);
+            min-height: 100vh;
+            padding: 30px 15px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            color: #071952;
+            margin-bottom: 10px;
+        }
+
+        p {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #555;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 7px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        input:focus, select:focus {
+            outline: 2px solid #088395;
+        }
+
+        .preferences {
+            margin-top: 20px;
+        }
+
+        .preferences label {
+            display: inline-block;
+            font-weight: normal;
+            margin-right: 15px;
+        }
+
+        .preferences input {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        button {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .submit-btn {
+            background: #088395;
+            color: white;
+        }
+
+        .reset-btn {
+            background: #ddd;
+            color: #222;
+        }
+
+        button:hover {
+            opacity: 0.85;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #071952;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>IPL Ticket Booking</h1>
+        <p>Book your favorite IPL match tickets!</p>
+
+        <form action="" method="get">
+
+            <!-- Name -->
+            <label for="name">Full Name</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your full name"
+                required
+                minlength="3"
+                maxlength="50"
+            >
+
+            <!-- Email -->
+            <label for="email">Email Address</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="example@gmail.com"
+                required
+            >
+
+            <!-- Phone -->
+            <label for="phone">Phone Number</label>
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter 10-digit phone number"
+                pattern="[0-9]{10}"
+                minlength="10"
+                maxlength="10"
+                title="Enter exactly 10 digits"
+                required
+            >
+
+            <!-- Match Selection -->
+            <label for="match">Select Match</label>
+            <select id="match" name="match" required>
+                <option value="">-- Choose a Match --</option>
+                <option value="RCB vs CSK">RCB vs CSK</option>
+                <option value="MI vs KKR">MI vs KKR</option>
+                <option value="RCB vs MI">RCB vs MI</option>
+                <option value="CSK vs SRH">CSK vs SRH</option>
+            </select>
+
+            <!-- Stand Category -->
+            <label for="stand">Stand Category</label>
+            <select id="stand" name="stand" required>
+                <option value="">-- Choose a Stand --</option>
+                <option value="General">General Stand</option>
+                <option value="Premium">Premium Stand</option>
+                <option value="VIP">VIP Stand</option>
+                <option value="Corporate">Corporate Box</option>
+            </select>
+
+            <!-- Number of Tickets -->
+            <label for="tickets">Number of Tickets</label>
+            <input
+                type="number"
+                id="tickets"
+                name="tickets"
+                min="1"
+                max="10"
+                value="1"
+                required
+            >
+
+            <!-- Booking Preference -->
+            <div class="preferences">
+                <label>Booking Preference</label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="preference"
+                        value="Online Payment"
+                    >
+                    Online Payment
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="preference"
+                        value="Pay at Counter"
+                    >
+                    Pay at Counter
+                </label>
+            </div>
+
+            <!-- Submit and Reset -->
+            <div class="buttons">
+                <button type="submit" class="submit-btn">
+                    Book Tickets
+                </button>
+
+                <button type="reset" class="reset-btn">
+                    Reset
+                </button>
+            </div>
+
+        </form>
+
+        <a href="index.html" class="back-link">
+            ← Back to Home
+        </a>
+
+    </div>
+
+</body>
+</html>
